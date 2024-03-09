@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo!</title>
+    <style>
+        body {
+            min-height: 10%;
+            font-family: Arial, sans-serif;
+            background: url('foto2 (3).jpeg'); /* Fundo com a imagem */
+            background-size:cover; /* Ajuste para cobrir toda a área disponível */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #fff; /* Cor do texto */
+            text-align: center;
+            position: relative; /* Importante para posicionar o modal */
+        }
+
+        #modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Cor semi-transparente para o modal */
+            z-index: 1; /* Garante que o modal esteja acima do conteúdo */
+        }
+
+        #conteudo {
+            padding: 5%; /* Espaçamento interno em porcentagem */
+            position: relative; /* Garante que o conteúdo fique sobre o modal */
+            z-index: 2; /* Garante que o conteúdo fique sobre o modal */
+        }
+
+        h2 {
+            font-size: 1.2vw; /* Tamanho de fonte responsivo */
+            line-height: 1.6;
+            margin-bottom: 5vw; /* Margem inferior responsiva */
+        }
+
+        button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 2vw 4vw; /* Preenchimento responsivo */
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 2vw; /* Margem responsiva */
+        }
+
+        button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="modal"></div> <!-- Modal transparente -->
+    <div id="conteudo">
+        <h2>Meu amor,
+            <br>
+            <br>
+            Em cada batida do meu coração, ecoa o seu nome como uma melodia suave que acalma minha alma. Você é mais do que especial, você é a luz que ilumina meus dias mais sombrios e a brisa suave que acaricia minha pele nas tardes quentes.
+            <br>
+            <br>
+            Seus olhos são janelas para um universo onde me perco com prazer, encontrando paz e inspiração em sua profundidade. Seu sorriso é como o sol, capaz de dissolver todas as nuvens de preocupação e trazer calor ao meu ser.
+            <br>
+            <br>
+            Cada momento ao seu lado é um tesouro que guardo no cofre do meu coração, pois em sua presença encontro a verdadeira essência da felicidade. Seu amor é o combustível que alimenta meus sonhos e me dá forças para superar qualquer obstáculo.
+            <br>
+            <br>
+            Eu te amo não apenas pelos momentos perfeitos que compartilhamos, mas também pelos desafios que enfrentamos juntos, fortalecendo ainda mais nosso vínculo. Você é minha âncora nos mares agitados da vida, mantendo-me firme e seguro mesmo nos momentos mais turbulentos.
+            <br>
+            <br>
+            Prometo estar ao seu lado em todas as estações da vida, celebrando suas alegrias e compartilhando suas tristezas. Pois você não é apenas uma mulher especial, você é meu porto seguro, minha companheira de alma, e eu sou eternamente grato por tê-la ao meu lado.
+            <br>
+            <br>
+            Com todo o meu amor,
+            Fango</h2>
+        <div>
+            <button onclick="sim()">Também amo você, FANGO</button>
+            <button onclick="desvia(this)" onmouseover="desvia(this)">Sai FANGO</button>
+        </div>
+    </div>
+
+    <script>
+        function sim() {
+            alert("Prometo te alegrar e te amar, pelo resto da minha vida!");
+            location.href = "https://music.youtube.com/watch?v=tVTjTHfcCf0";
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+
+</html>
